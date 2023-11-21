@@ -5,6 +5,6 @@ RUN apk add --no-cache supervisor \
 
 COPY supervisord.conf /
 
-ENV NEXTCLOUD_UPDATE=1
+ENV NEXTCLOUD_DOCKER_MODE=php-fpm
 
 CMD ["/usr/bin/supervisord", "-c", "/supervisord.conf"]
